@@ -10,8 +10,13 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./bootstrap.min.css"
 import "./layout.css"
-
-const Layout = ({ children }) => <>{children}</> //<>bracket is like<React Fragment> in react
+import Navbar from "./Global/Navbar"
+const Layout = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+  </>
+) //<>bracket is like<React Fragment> in react
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
